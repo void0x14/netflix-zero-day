@@ -1,0 +1,7 @@
+[02:52:15.635] target http://localhost:7106  series 200
+[02:52:15.648] ready 200
+[02:52:15.732] publish 200 series 200
+[02:52:17.763] indexed after 2s
+[02:52:17.764] baseline 200 in 0.404796s
+[02:52:18.176] attack sent
+[02:52:20.179] polling other reads

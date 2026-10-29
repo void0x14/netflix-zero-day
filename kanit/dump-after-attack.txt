@@ -1,0 +1,569 @@
+2698256:
+2026-10-22 20:38:44
+Full thread dump OpenJDK 64-Bit Server VM (27 mixed mode, sharing)
+                 JDK version: OpenJDK Runtime Environment (27.0) (build 27)
+
+Threads class SMR info:
+_java_thread_list=0x000076ef647e74f0, length=45, elements={
+0x000076efa40c2ea0, 0x000076efa40c3fa0, 0x000076efa40c58a0, 0x000076efa40c7050,
+0x000076efa40c87f0, 0x000076efa40ca920, 0x000076efa40cc230, 0x000076efa40d7600,
+0x000076efa40d9f00, 0x000076efa4ddd070, 0x000076efa4e40f70, 0x000076efa4920990,
+0x000076efa49237e0, 0x000076ef7c004720, 0x000076ef80008700, 0x000076efa56eb020,
+0x000076efa57b06c0, 0x000076efa57b1810, 0x000076efa57b2bb0, 0x000076efa57b4000,
+0x000076efa59804b0, 0x000076efa52172e0, 0x000076efa52197a0, 0x000076efa56e3900,
+0x000076ef7c027850, 0x000076efa589f9b0, 0x000076efa401bf80, 0x000076ef8401df50,
+0x000076ef7c082310, 0x000076ef841d9da0, 0x000076efa409bb90, 0x000076ef84475b70,
+0x000076efa409c630, 0x000076ef584ce110, 0x000076ef84476a30, 0x000076ef600185c0,
+0x000076ef7c0890d0, 0x000076ef5822ca40, 0x000076ef58f85f20, 0x000076efa4e21ff0,
+0x000076ef60019e60, 0x000076ef58f87650, 0x000076ef64cf8a90, 0x000076ef74086da0,
+0x000076ef647e6540
+}
+
+"Reference Handler" #13 [2698268] daemon prio=10 os_prio=0 cpu=2.47ms elapsed=290.78s tid=0x000076efa40c2ea0 nid=2698268 waiting on condition  [0x000076efa92be000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@27/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@27/Reference.java:240)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@27/Reference.java:202)
+
+"Finalizer" #14 [2698269] daemon prio=8 os_prio=0 cpu=0.17ms elapsed=290.78s tid=0x000076efa40c3fa0 nid=2698269 in Object.wait()  [0x000076efa89fe000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@27/Native Method)
+	- waiting on <0x000000070748a418> (a java.lang.Object)
+	at java.lang.Object.wait(java.base@27/Object.java:391)
+	at java.lang.Object.wait(java.base@27/Object.java:353)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@27/ReferenceQueue.java:136)
+	at java.lang.ref.ReferenceQueue.remove(java.base@27/ReferenceQueue.java:214)
+	- locked <0x000000070748a418> (a java.lang.Object)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@27/Finalizer.java:165)
+
+"Signal Dispatcher" #15 [2698270] daemon prio=9 os_prio=0 cpu=0.31ms elapsed=290.78s tid=0x000076efa40c58a0 nid=2698270 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #16 [2698271] daemon prio=9 os_prio=0 cpu=46.29ms elapsed=290.78s tid=0x000076efa40c7050 nid=2698271 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #17 [2698272] daemon prio=9 os_prio=0 cpu=10.18ms elapsed=290.78s tid=0x000076efa40c87f0 nid=2698272 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #18 [2698273] daemon prio=9 os_prio=0 cpu=5058.40ms elapsed=290.78s tid=0x000076efa40ca920 nid=2698273 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #21 [2698274] daemon prio=9 os_prio=0 cpu=1905.41ms elapsed=290.78s tid=0x000076efa40cc230 nid=2698274 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #22 [2698275] daemon prio=9 os_prio=0 cpu=23.16ms elapsed=290.77s tid=0x000076efa40d7600 nid=2698275 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #23 [2698276] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=290.77s tid=0x000076efa40d9f00 nid=2698276 in Object.wait()  [0x000076efa82f7000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@27/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@27/Object.java:391)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@27/ReferenceQueue.java:122)
+	at java.lang.ref.ReferenceQueue.remove(java.base@27/ReferenceQueue.java:200)
+	- locked <0x000000070748a4c0> (a java.lang.Object)
+	at jdk.internal.ref.CleanerImpl.run(java.base@27/CleanerImpl.java:146)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+	at jdk.internal.misc.InnocuousThread.run(java.base@27/InnocuousThread.java:148)
+
+"atlas-scheduler-1" #32 [2698359] prio=5 os_prio=0 cpu=741.12ms elapsed=288.83s tid=0x000076efa4ddd070 nid=2698359 waiting on condition  [0x000076ef5dbfa000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@27/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@27/Thread.java:562)
+	at java.lang.Thread.sleep(java.base@27/Thread.java:593)
+	at org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+	at org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$3.nextTick(LightArrayRevolverScheduler.scala:319)
+	at org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$3.run(LightArrayRevolverScheduler.scala:289)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"atlas-pekko.actor.internal-dispatcher-2" #37 [2698366] prio=5 os_prio=0 cpu=69.08ms elapsed=288.72s tid=0x000076efa4e40f70 nid=2698366 waiting on condition  [0x000076ef5d6f5000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d275f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.internal-dispatcher-3" #38 [2698367] prio=5 os_prio=0 cpu=77.41ms elapsed=288.71s tid=0x000076efa4920990 nid=2698367 waiting on condition  [0x000076ef5d5f4000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d275f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.internal-dispatcher-4" #39 [2698368] prio=5 os_prio=0 cpu=101.54ms elapsed=288.71s tid=0x000076efa49237e0 nid=2698368 waiting on condition  [0x000076ef5d4f3000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d275f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-5" #40 [2698369] prio=5 os_prio=0 cpu=734.67ms elapsed=288.71s tid=0x000076ef7c004720 nid=2698369 waiting on condition  [0x000076ef5d3f2000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-6" #41 [2698370] prio=5 os_prio=0 cpu=306.50ms elapsed=288.69s tid=0x000076ef80008700 nid=2698370 waiting on condition  [0x000076ef5d2f1000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"spectator-gauge-polling-0" #42 [2698373] daemon prio=5 os_prio=0 cpu=35.64ms elapsed=288.48s tid=0x000076efa56eb020 nid=2698373 waiting on condition  [0x000076ef5d1f0000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709ccf3f8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@27/LockSupport.java:271)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@27/AbstractQueuedSynchronizer.java:1804)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@27/ScheduledThreadPoolExecutor.java:1166)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@27/ScheduledThreadPoolExecutor.java:883)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@27/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"spectator-spectator-reg-atlas-0" #43 [2698374] daemon prio=5 os_prio=0 cpu=19.66ms elapsed=288.48s tid=0x000076efa57b06c0 nid=2698374 waiting on condition  [0x000076ef5d0ef000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709ccefa8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.DelayQueue.take(java.base@27/DelayQueue.java:250)
+	at com.netflix.spectator.impl.Scheduler$Worker.run(Scheduler.java:505)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"spectator-spectator-reg-atlas-1" #44 [2698375] daemon prio=5 os_prio=0 cpu=5.30ms elapsed=288.48s tid=0x000076efa57b1810 nid=2698375 waiting on condition  [0x000076ef5cfee000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709ccefa8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@27/LockSupport.java:271)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@27/AbstractQueuedSynchronizer.java:1804)
+	at java.util.concurrent.DelayQueue.take(java.base@27/DelayQueue.java:255)
+	at com.netflix.spectator.impl.Scheduler$Worker.run(Scheduler.java:505)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"spectator-spectator-reg-atlas-2" #45 [2698376] daemon prio=5 os_prio=0 cpu=11.03ms elapsed=288.48s tid=0x000076efa57b2bb0 nid=2698376 waiting on condition  [0x000076ef5ceed000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709ccefa8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.DelayQueue.take(java.base@27/DelayQueue.java:250)
+	at com.netflix.spectator.impl.Scheduler$Worker.run(Scheduler.java:505)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"spectator-spectator-reg-atlas-3" #46 [2698377] daemon prio=5 os_prio=0 cpu=14.60ms elapsed=288.48s tid=0x000076efa57b4000 nid=2698377 waiting on condition  [0x000076ef5cdec000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709ccefa8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.DelayQueue.take(java.base@27/DelayQueue.java:250)
+	at com.netflix.spectator.impl.Scheduler$Worker.run(Scheduler.java:505)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"JFR Recorder Thread" #47 [2698379] daemon prio=5 os_prio=0 cpu=19.74ms elapsed=288.45s tid=0x000076efa59804b0 nid=2698379 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"JFR Periodic Tasks" #48 [2698381] daemon prio=5 os_prio=0 cpu=22.23ms elapsed=288.37s tid=0x000076efa52172e0 nid=2698381 in Object.wait()  [0x000076ef5cbea000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@27/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@27/Object.java:391)
+	at jdk.jfr.internal.PlatformRecorder.takeNap(jdk.jfr@27/PlatformRecorder.java:576)
+	- locked <0x0000000709d49fa0> (a jdk.jfr.internal.management.HiddenWait)
+	at jdk.jfr.internal.PlatformRecorder.periodicTask(jdk.jfr@27/PlatformRecorder.java:544)
+	at jdk.jfr.internal.PlatformRecorder.lambda$startDiskMonitor$0(jdk.jfr@27/PlatformRecorder.java:464)
+	at jdk.jfr.internal.PlatformRecorder$$Lambda/0x000000000e602c00.run(jdk.jfr@27/Unknown Source)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"spectator-jfr" #50 [2698382] daemon prio=5 os_prio=0 cpu=134.82ms elapsed=288.36s tid=0x000076efa52197a0 nid=2698382 in Object.wait()  [0x000076ef5cae9000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@27/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@27/Object.java:391)
+	at jdk.jfr.internal.management.HiddenWait.takeNap(jdk.jfr@27/HiddenWait.java:35)
+	- locked <0x0000000709884680> (a jdk.jfr.internal.management.HiddenWait)
+	at jdk.jfr.internal.util.Utils.waitFlush(jdk.jfr@27/Utils.java:353)
+	at jdk.jfr.internal.consumer.ChunkParser.awaitUpdatedHeader(jdk.jfr@27/ChunkParser.java:303)
+	at jdk.jfr.internal.consumer.ChunkParser.readStreamingEvent(jdk.jfr@27/ChunkParser.java:200)
+	at jdk.jfr.internal.consumer.EventDirectoryStream.processOrdered(jdk.jfr@27/EventDirectoryStream.java:239)
+	at jdk.jfr.internal.consumer.EventDirectoryStream.processRecursionSafe(jdk.jfr@27/EventDirectoryStream.java:161)
+	at jdk.jfr.internal.consumer.EventDirectoryStream.process(jdk.jfr@27/EventDirectoryStream.java:120)
+	at jdk.jfr.internal.consumer.AbstractEventStream.execute(jdk.jfr@27/AbstractEventStream.java:262)
+	at jdk.jfr.internal.consumer.AbstractEventStream.start(jdk.jfr@27/AbstractEventStream.java:234)
+	at jdk.jfr.consumer.RecordingStream.start(jdk.jfr@27/RecordingStream.java:350)
+	at com.netflix.spectator.jvm.JavaFlightRecorder$$Lambda/0x000000000e645800.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"MemoryDatabaseRebuildIndex" #52 [2698384] prio=5 os_prio=0 cpu=169.57ms elapsed=288.27s tid=0x000076efa56e3900 nid=2698384 waiting on condition  [0x000076ef5c9e8000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@27/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@27/Thread.java:562)
+	at java.lang.Thread.sleep(java.base@27/Thread.java:593)
+	at com.netflix.atlas.core.db.MemoryDatabase$RebuildTask.run(MemoryDatabase.scala:92)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"atlas-pekko.io.pinned-dispatcher-7" #55 [2698396] prio=5 os_prio=0 cpu=38.98ms elapsed=287.55s tid=0x000076ef7c027850 nid=2698396 runnable  [0x000076ef5c6e5000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPoll.wait(java.base@27/Native Method)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(java.base@27/EPollSelectorImpl.java:117)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(java.base@27/SelectorImpl.java:130)
+	- locked <0x000000071a8d8870> (a sun.nio.ch.Util$2)
+	- locked <0x000000071a8d8820> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(java.base@27/SelectorImpl.java:142)
+	at org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$2.tryRun(SelectionHandler.scala:163)
+	at org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+	at org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$2.run(SelectionHandler.scala:196)
+	at org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+	at org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+	at org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"ExpressionDatabase-0" #56 [2698397] daemon prio=5 os_prio=0 cpu=20.46ms elapsed=287.52s tid=0x000076efa589f9b0 nid=2698397 waiting on condition  [0x000076ef5c5e4000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x000000071a920ab0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@27/LockSupport.java:271)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@27/AbstractQueuedSynchronizer.java:1804)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@27/ScheduledThreadPoolExecutor.java:1166)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@27/ScheduledThreadPoolExecutor.java:883)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@27/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"DestroyJavaVM" #59 [2698258] prio=5 os_prio=0 cpu=2710.72ms elapsed=287.49s tid=0x000076efa401bf80 nid=2698258 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"atlas-pekko.actor.default-dispatcher-8" #60 [2698496] prio=5 os_prio=0 cpu=1540.31ms elapsed=283.29s tid=0x000076ef8401df50 nid=2698496 waiting on condition  [0x000076efa81f6000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"InnocuousThread-1" #61 [2698497] daemon prio=5 os_prio=0 cpu=0.13ms elapsed=283.28s tid=0x000076ef7c082310 nid=2698497 in Object.wait()  [0x000076ef5defd000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@27/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@27/Object.java:391)
+	at java.lang.Object.wait(java.base@27/Object.java:353)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@27/ReferenceQueue.java:136)
+	at java.lang.ref.ReferenceQueue.remove(java.base@27/ReferenceQueue.java:214)
+	- locked <0x000000071a890758> (a java.lang.Object)
+	at java.nio.BufferCleaner$CleaningRunnable.run(java.base@27/BufferCleaner.java:212)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+	at jdk.internal.misc.InnocuousThread.run(java.base@27/InnocuousThread.java:148)
+
+"Java2D Disposer" #63 [2698501] daemon prio=10 os_prio=0 cpu=5.01ms elapsed=283.08s tid=0x000076ef841d9da0 nid=2698501 in Object.wait()  [0x000076ef5c2f0000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@27/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@27/Object.java:391)
+	at java.lang.Object.wait(java.base@27/Object.java:353)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@27/ReferenceQueue.java:136)
+	at java.lang.ref.ReferenceQueue.remove(java.base@27/ReferenceQueue.java:214)
+	- locked <0x000000071a890868> (a java.lang.Object)
+	at sun.java2d.Disposer.run(java.desktop@27/Disposer.java:114)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"atlas-pekko.actor.default-dispatcher-9" #66 [2698512] prio=5 os_prio=0 cpu=253.35ms elapsed=282.65s tid=0x000076efa409bb90 nid=2698512 waiting on condition  [0x000076ef57a9a000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-10" #67 [2698514] prio=5 os_prio=0 cpu=195.87ms elapsed=282.55s tid=0x000076ef84475b70 nid=2698514 waiting on condition  [0x000076ef57999000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-11" #68 [2698515] prio=5 os_prio=0 cpu=208.81ms elapsed=282.54s tid=0x000076efa409c630 nid=2698515 waiting on condition  [0x000076ef57b9b000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"spectator-atlas-publish-0" #69 [2698524] daemon prio=5 os_prio=0 cpu=91.37ms elapsed=282.05s tid=0x000076ef584ce110 nid=2698524 waiting on condition  [0x000076ef57c9c000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d24448> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@27/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@27/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"atlas-pekko.actor.default-dispatcher-12" #70 [2698750] prio=5 os_prio=0 cpu=220.58ms elapsed=272.47s tid=0x000076ef84476a30 nid=2698750 waiting on condition  [0x000076ef57898000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-13" #71 [2698751] prio=5 os_prio=0 cpu=1790.42ms elapsed=272.47s tid=0x000076ef600185c0 nid=2698751 waiting on condition  [0x000076ef57797000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-14" #72 [2698752] prio=5 os_prio=0 cpu=172.40ms elapsed=272.48s tid=0x000076ef7c0890d0 nid=2698752 waiting on condition  [0x000076ef57696000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"spectator-atlas-publish-1" #73 [2698758] daemon prio=5 os_prio=0 cpu=20.38ms elapsed=272.06s tid=0x000076ef5822ca40 nid=2698758 waiting on condition  [0x000076ef57595000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d24448> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@27/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@27/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"spectator-atlas-publish-2" #75 [2698972] daemon prio=5 os_prio=0 cpu=29.99ms elapsed=262.06s tid=0x000076ef58f85f20 nid=2698972 waiting on condition  [0x000076ef57393000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d24448> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@27/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@27/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"atlas-pekko.actor.default-dispatcher-15" #76 [2699253] prio=5 os_prio=0 cpu=86136.38ms elapsed=252.32s tid=0x000076efa4e21ff0 nid=2699253 runnable  [0x000076ef5728f000]
+   java.lang.Thread.State: RUNNABLE
+	at jdk.internal.util.ArraysSupport.mismatch(java.base@27/ArraysSupport.java:563)
+	at java.lang.String.startsWith(java.base@27/String.java:2735)
+	at com.netflix.spectator.impl.matcher.CharSeqMatcher.matches(CharSeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.SeqMatcher.matches(SeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:87)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.SeqMatcher.matches(SeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.SeqMatcher.matches(SeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.SeqMatcher.matches(SeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:81)
+	at com.netflix.spectator.impl.matcher.SeqMatcher.matches(SeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.Matcher.matches(Matcher.java:51)
+	at com.netflix.atlas.core.model.Query$Regex.check(Query.scala:548)
+	at com.netflix.atlas.core.index.RoaringTagIndex.andPattern(RoaringTagIndex.scala:627)
+	at com.netflix.atlas.core.index.RoaringTagIndex.walkTerm(RoaringTagIndex.scala:533)
+	at com.netflix.atlas.core.index.RoaringTagIndex.intersect(RoaringTagIndex.scala:504)
+	at com.netflix.atlas.core.index.RoaringTagIndex.and(RoaringTagIndex.scala:483)
+	at com.netflix.atlas.core.index.RoaringTagIndex.findReadOnly(RoaringTagIndex.scala:265)
+	at com.netflix.atlas.core.index.RoaringTagIndex.$anonfun$findItems$4(RoaringTagIndex.scala:972)
+	at com.netflix.atlas.core.index.RoaringTagIndex$$Lambda/0x000000000ea45c00.apply(Unknown Source)
+	at scala.Option.fold(Option.scala:263)
+	at com.netflix.atlas.core.index.RoaringTagIndex.findItems(RoaringTagIndex.scala:972)
+	at com.netflix.atlas.core.index.CachingTagIndex.$anonfun$findItemsCache$1(CachingTagIndex.scala:34)
+	at com.netflix.atlas.core.index.CachingTagIndex$$Lambda/0x000000000e67e000.apply(Unknown Source)
+	at com.netflix.atlas.core.index.CachingTagIndex$$anon$1.load(CachingTagIndex.scala:39)
+	at com.netflix.atlas.core.index.CachingTagIndex$$anon$1.load(CachingTagIndex.scala:37)
+	at com.github.benmanes.caffeine.cache.LocalLoadingCache.lambda$newMappingFunction$0(LocalLoadingCache.java:192)
+	at com.github.benmanes.caffeine.cache.LocalLoadingCache$$Lambda/0x000000000e67d000.apply(Unknown Source)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$doComputeIfAbsent$0(BoundedLocalCache.java:2767)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x000000000ea45400.apply(Unknown Source)
+	at java.util.concurrent.ConcurrentHashMap.compute(java.base@27/ConcurrentHashMap.java:1943)
+	- locked <0x000000071a78b648> (a java.util.concurrent.ConcurrentHashMap$ReservationNode)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.doComputeIfAbsent(BoundedLocalCache.java:2765)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.computeIfAbsent(BoundedLocalCache.java:2756)
+	at com.github.benmanes.caffeine.cache.LocalCache.computeIfAbsent(LocalCache.java:132)
+	at com.github.benmanes.caffeine.cache.LocalLoadingCache.get(LocalLoadingCache.java:60)
+	at com.netflix.atlas.core.index.CachingTagIndex.findItems(CachingTagIndex.scala:57)
+	at com.netflix.atlas.core.index.BatchUpdateTagIndex.findItems(BatchUpdateTagIndex.scala:157)
+	at com.netflix.atlas.core.db.MemoryDatabase.executeImpl(MemoryDatabase.scala:247)
+	at com.netflix.atlas.core.db.MemoryDatabase.execute(MemoryDatabase.scala:296)
+	at com.netflix.atlas.webapi.LocalDatabaseActor.$anonfun$executeDataRequest$1(LocalDatabaseActor.scala:47)
+	at com.netflix.atlas.webapi.LocalDatabaseActor$$Lambda/0x000000000ea41400.apply(Unknown Source)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at com.netflix.atlas.webapi.LocalDatabaseActor.com$netflix$atlas$webapi$LocalDatabaseActor$$executeDataRequest(LocalDatabaseActor.scala:47)
+	at com.netflix.atlas.webapi.LocalDatabaseActor$$anonfun$com$netflix$atlas$webapi$LocalDatabaseActor$$innerReceive$1.applyOrElse(LocalDatabaseActor.scala:43)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:35)
+	at com.netflix.atlas.webapi.LocalDatabaseActor$$anonfun$receive$1.applyOrElse(LocalDatabaseActor.scala:31)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at com.netflix.atlas.webapi.LocalDatabaseActor.aroundReceive(LocalDatabaseActor.scala:24)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:273)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:234)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:246)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@27/ForkJoinTask.java:507)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@27/ForkJoinPool.java:1450)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2019)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"atlas-pekko.actor.default-dispatcher-16" #77 [2699254] prio=5 os_prio=0 cpu=258.68ms elapsed=252.32s tid=0x000076ef60019e60 nid=2699254 waiting on condition  [0x000076ef57191000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"spectator-atlas-publish-3" #78 [2699258] daemon prio=5 os_prio=0 cpu=17.49ms elapsed=252.06s tid=0x000076ef58f87650 nid=2699258 waiting on condition  [0x000076ef57090000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d24448> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@27/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@27/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@27/ForkJoinPool.java:4367)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@27/ForkJoinPool.java:4313)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@27/AbstractQueuedSynchronizer.java:1753)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@27/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@27/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@27/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@27/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+
+"atlas-pekko.actor.default-dispatcher-17" #79 [2699802] prio=5 os_prio=0 cpu=1844.68ms elapsed=232.22s tid=0x000076ef64cf8a90 nid=2699802 waiting on condition  [0x000076ef56f8f000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@27/Native Method)
+	- parking to wait for  <0x0000000709d2d8f8> (a org.apache.pekko.dispatch.PekkoJdk9ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@27/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@27/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@27/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@27/ForkJoinWorkerThread.java:187)
+
+"Keep-Alive-Timer" #81 [2705854] daemon prio=8 os_prio=0 cpu=2.96ms elapsed=142.03s tid=0x000076ef74086da0 nid=2705854 waiting on condition  [0x000076ef57494000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@27/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@27/Thread.java:562)
+	at java.lang.Thread.sleep(java.base@27/Thread.java:593)
+	at sun.net.www.http.KeepAliveCache.run(java.base@27/KeepAliveCache.java:224)
+	at java.lang.Thread.runWith(java.base@27/Thread.java:1540)
+	at java.lang.Thread.run(java.base@27/Thread.java:1527)
+	at jdk.internal.misc.InnocuousThread.run(java.base@27/InnocuousThread.java:148)
+
+"Attach Listener" #82 [2711388] daemon prio=9 os_prio=0 cpu=0.62ms elapsed=0.12s tid=0x000076ef647e6540 nid=2711388 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#9" os_prio=0 cpu=29.69ms elapsed=288.27s tid=0x000076ef6cd45100 nid=2698386 runnable  
+
+"GC Thread#8" os_prio=0 cpu=37.23ms elapsed=288.27s tid=0x000076ef6cd44780 nid=2698385 runnable  
+
+"G1 Conc#2" os_prio=0 cpu=62.24ms elapsed=288.83s tid=0x000076ef78003590 nid=2698363 runnable  
+
+"G1 Conc#1" os_prio=0 cpu=60.14ms elapsed=288.83s tid=0x000076ef78002ee0 nid=2698362 runnable  
+
+"GC Thread#7" os_prio=0 cpu=29.91ms elapsed=288.83s tid=0x000076ef6ce536c0 nid=2698361 runnable  
+
+"GC Thread#6" os_prio=0 cpu=37.19ms elapsed=288.83s tid=0x000076ef6d45d160 nid=2698360 runnable  
+
+"GC Thread#5" os_prio=0 cpu=38.31ms elapsed=289.76s tid=0x000076ef6cbe7990 nid=2698307 runnable  
+
+"GC Thread#4" os_prio=0 cpu=64.08ms elapsed=289.96s tid=0x000076ef6cbe9fb0 nid=2698304 runnable  
+
+"GC Thread#3" os_prio=0 cpu=68.61ms elapsed=290.19s tid=0x000076ef6cbde280 nid=2698299 runnable  
+
+"GC Thread#2" os_prio=0 cpu=36.22ms elapsed=290.19s tid=0x000076ef6cbdd210 nid=2698298 runnable  
+
+"GC Thread#1" os_prio=0 cpu=35.18ms elapsed=290.64s tid=0x000076ef6c0a6b30 nid=2698282 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=64.85ms elapsed=290.64s tid=0x000076ef6c01c570 nid=2698281 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.93ms elapsed=290.64s tid=0x000076ef6c01bba0 nid=2698280 runnable  
+
+"VM Thread" os_prio=0 cpu=32.75ms elapsed=290.80s tid=0x000076efa40b7b80 nid=2698267 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=2.21ms elapsed=290.80s tid=0x000076efa40a6bf0 nid=2698266 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=61.16ms elapsed=290.81s tid=0x000076efa4089390 nid=2698262 runnable  
+
+"G1 Refinement Workers#0" os_prio=0 cpu=0.03ms elapsed=290.81s tid=0x000076efa4088290 nid=2698261 runnable  
+
+"G1 Refine Control" os_prio=0 cpu=0.06ms elapsed=290.81s tid=0x000076efa4087040 nid=2698260 runnable  
+
+"GC Thread#0" os_prio=0 cpu=46.96ms elapsed=290.81s tid=0x000076efa406b650 nid=2698259 runnable  
+
+JNI global refs: 109, weak refs: 493
+

@@ -1,0 +1,5 @@
+=== REAL Netflix Atlas standalone (:7101) - GET /api/v1/tags?q=<key>,<value>,:re ===
+control  (valid regex)             HTTP 200
+malformed (NumberFormat/IAE)       HTTP 400  {"type":"error","message":"NumberFormatException: For input string: \"999999999999\""}
+malformed (unsupported -> IAE)     HTTP 400  {"type":"error","message":"IllegalArgumentException: unsupported: back references\n^.*(^\\
+malformed (our bug -> IOBE)        HTTP 500  {"type":"error","message":"IndexOutOfBoundsException: Index -1 out of bounds for length 0"}

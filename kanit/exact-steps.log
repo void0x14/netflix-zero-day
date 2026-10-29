@@ -1,0 +1,27 @@
+== step 1 ==
+step1 done
+== step 2 ==
+publish 200
+== step 3 ==
+step3 indexed
+== step 4 ==
+baseline 200
+== step 5 ==
+attack fired
+== step 6 ==
+step6 wedge=yes probes=1
+== step 7 ==
+	at com.netflix.spectator.impl.matcher.CharSeqMatcher.matches(CharSeqMatcher.java:71)
+	at com.netflix.spectator.impl.matcher.ZeroOrMoreMatcher.matches(ZeroOrMoreMatcher.java:99)
+	at com.netflix.spectator.impl.matcher.SeqMatcher.matches(SeqMatcher.java:71)
+	at com.netflix.atlas.core.model.Query$Regex.check(Query.scala:548)
+	at com.netflix.atlas.core.index.RoaringTagIndex.andPattern(RoaringTagIndex.scala:627)
+	at com.netflix.atlas.webapi.LocalDatabaseActor.$anonfun$executeDataRequest$1(LocalDatabaseActor.scala:47)
+== step 8 ==
+tags 503
+graph 503
+== step 9 ==
+health 200
+publish 200
+== step 10 ==
+killed 3610501
